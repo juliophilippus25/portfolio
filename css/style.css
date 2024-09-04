@@ -10,7 +10,7 @@ html, body {
 }
 
 section {
-    padding: 10px 128px;
+    padding: 64px 128px;
 }
 
 .navbar {
@@ -78,6 +78,10 @@ section {
 }
 
 .desc-home h1 {
+    font-size: 48px;
+}
+
+.desc-home h2 {
     font-size: 32px;
 }
 
@@ -118,4 +122,13 @@ section {
     border-radius: 50%;
     width: 300px;
     height: 300px;
+}
+
+#about p {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#about h1 {
+    font-size: 48px
 }
