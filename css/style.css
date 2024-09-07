@@ -251,7 +251,7 @@ h2 {
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #272727;
+    background-color: rgba(0, 0, 0, 0.75);
     color: #fff;
     padding: 6px 12px;
     border-radius: 12px;
