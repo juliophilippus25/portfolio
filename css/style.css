@@ -322,3 +322,27 @@ h2 {
     padding: 20px 0;
     margin-bottom: 8px;
 }
+
+footer {
+    background-color: #272727;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 128px;
+}
+
+.icon-footer {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.icon-footer a:hover {
+    color: gray; 
+}
