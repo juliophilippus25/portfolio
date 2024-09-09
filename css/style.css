@@ -12,7 +12,8 @@ html, body {
 }
 
 section {
-    padding: 64px 128px;
+    padding: 64px 72px;
+    transition: all .3s;
 }
 
 h1 {
@@ -23,45 +24,66 @@ h2 {
     font-size: 32px;
 }
 
-.navbar {
+header{
+    width: 100%;
+    /* position:fixed; */
+    /* left: 0;
+    top: 0;
+    right: 0; */
+    padding: 20px 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 128px;
+    /* background-color: red; */
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: white;
-}
-
-.nav-links {
-    list-style: none;
     display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
     gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
+nav ul li a {
     text-decoration: none;
     color: white;
     transition: .3s ease;
-    padding: 8px 0;
+    padding: 8px;
     border-bottom: 3px solid transparent;
 }
 
-.nav-links li > a:hover {
+nav ul li a:hover {
     border-bottom: 3px solid white;
+    font-weight: 500;
 }
 
 .cta-buttons {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    border-radius: 50%;
+    background-color: #1A1D29;
+    padding: 12px;
+}
+
+.menu-icon:hover {
+    background-color: #3D3F4A;
 }
 
 .btn {
@@ -340,7 +362,7 @@ h2 {
 }
 
 footer {
-    background-color: #3D3F4A;
+    background-color: #1e2230;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -360,16 +382,60 @@ footer {
 }
 
 .icon-footer a:hover {
-    color: #1A1D29; 
+    color: gray; 
 }
 
-/* @media (max-width:600px) {
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        text-align: center;
+@media only screen and (max-width:768px) {
+    section {
+        padding: 20px;
     }
-} */
+
+    header {
+        padding: 20px;
+    }
+
+    header nav {
+        position: absolute;
+        left: 0;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        background-color: #1A1D29;
+    }
+
+    header nav a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        transition: all .3s;
+    }
+    
+    nav ul.hidden {
+        display: none;
+    }
+
+    .logo {
+        padding: 8px 0;
+    }
+    
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
