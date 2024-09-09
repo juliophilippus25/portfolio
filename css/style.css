@@ -593,7 +593,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 414px) and (orientation: landscape){
+@media only screen and (max-width: 414px){
     h1 {
         font-size: 22px;
     }
@@ -634,7 +634,7 @@ footer {
 
     .job-exp-item-detail, .project-exp-item-detail ul li {
         margin-left: 0;
-        line-height: 18px;
+        line-height: 14px;
         font-size: 14px;
     }
 
