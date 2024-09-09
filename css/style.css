@@ -593,9 +593,9 @@ footer {
     }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 414px){
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     h2 {
@@ -615,11 +615,11 @@ footer {
     }
 
     .logo {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .menu-icon {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .btn {
@@ -632,7 +632,7 @@ footer {
         height: 200px;
     }
 
-    .job-exp-item-detail li {
+    .job-exp-item-detail ul li {
         margin-left: 0;
         line-height: 18px;
         font-size: 14px;
