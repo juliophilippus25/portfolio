@@ -13,7 +13,7 @@ html, body {
 
 section {
     padding: 64px 72px;
-    transition: all .3s;
+    transition: all .3s ease;
 }
 
 section .animate {
@@ -34,7 +34,7 @@ section.show-animate .animate {
 }
 
 #certifications .animate {
-    transform: translateY(100%)
+    transform: translateY(50%)
 }
 
 #certifications.show-animate .animate {
@@ -55,6 +55,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 1s ease;
 }
 
 .logo {
@@ -82,8 +83,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    border-bottom: 3px solid white;
-    font-weight: 500;
+    border-bottom: 3px solid #F39422;
+    color: #F39422;
+    font-weight: 600;
 }
 
 .cta-buttons {
@@ -103,12 +105,12 @@ nav ul li a:hover {
 }
 
 .menu-icon:hover {
-    background-color: #3D3F4A;
+    background-color: #F39422;
 }
 
 .btn {
     padding: 8px 16px;
-    background-color: #3D3F4A;
+    background-color: #F39422;
     color: white;
     border: none;
     border-radius: 20px;
@@ -118,7 +120,7 @@ nav ul li a:hover {
 }
 
 .btn-contact {
-    background-color: #3D3F4A;
+    background-color: #F39422;
     color: white;
     border: none;
     border-radius: 5px;
@@ -128,7 +130,7 @@ nav ul li a:hover {
 }
 
 .btn-credential {
-    background-color: #3D3F4A;
+    background-color: #F39422;
     color: white;
     border: none;
     border-radius: 20px;
@@ -138,12 +140,12 @@ nav ul li a:hover {
 }
 
 .btn:hover, .btn.active {
-    background-color: #7D8491;
+    background-color: #c0751a;
     color: white;
 }
 
 .btn.active:hover {
-    background-color: #3D3F4A;
+    background-color: #F39422;
     color: white;
 }
 
@@ -189,7 +191,7 @@ nav ul li a:hover {
     width: 60%;
 }
 
-.home-buttons {
+.home-button {
     display: flex;
     gap: 10px;
     margin-top: 25px;
@@ -216,6 +218,12 @@ nav ul li a:hover {
     width: 300px;
     height: 300px;
     border: 3px solid white;
+    transition: 0.4s ease-in-out;
+}
+
+.img-home img:hover {
+    box-shadow: 4px 8px #F39422;
+    transform: scale(1.05);
 }
 
 #about p {
@@ -335,7 +343,7 @@ nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
+    color: white;
     padding: 6px 12px;
     border-radius: 12px;
     white-space: nowrap;
@@ -363,7 +371,7 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     width: calc(50% - 20px);
@@ -386,7 +394,7 @@ nav ul li a:hover {
 
 .card-header h2 {
     font-size: 24px;
-    color: #3D3F4A;
+    color: #1A1D29;
     margin-bottom: 10px;
     padding: 0 10px;
 }
@@ -408,12 +416,12 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #1e2230;
+    background-color: #F39422;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 128px;
+    padding: 12px 72px;
 }
 
 .icon-footer {
@@ -428,7 +436,7 @@ footer {
 }
 
 .icon-footer a:hover {
-    color: gray; 
+    color: #8d5107; 
 }
 
 @media only screen and (max-width: 1200px) {
@@ -469,6 +477,22 @@ footer {
         padding: 20px;
     }
 
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
     header {
         padding: 20px;
     }
@@ -480,7 +504,6 @@ footer {
         right: 0;
         width: 100%;
         padding: 20px;
-        transition: opacity 0.3s ease;
         opacity: 1;
         background-color: #1A1D29;
     }
@@ -514,10 +537,6 @@ footer {
         cursor: pointer;
     }
 
-    .cta-buttons {
-        flex-direction: column;
-    }
-
     .container-home {
         flex-direction: column-reverse;
         align-items: center;
@@ -530,7 +549,6 @@ footer {
     }
 
     .desc-home h1 {
-        /* width: 100%; */
         text-align: center;
     }
 
@@ -538,6 +556,11 @@ footer {
         width: 100%;
         text-align: center;
         margin-top: 20px;
+    }
+
+    .img-home img {
+        width: 250px;
+        height: 250px;
     }
 
     .tech-stack-item {
@@ -619,6 +642,10 @@ footer {
         height: 38px;
         filter: grayscale(1);
         /* cursor: pointer; */
+    }
+
+    .btn.home {
+        padding: 8px 4px;
     }
 
     .card-header h2 {
