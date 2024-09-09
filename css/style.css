@@ -16,6 +16,31 @@ section {
     transition: all .3s;
 }
 
+section .animate {
+    filter: blur(5px);
+    transition: 1s;
+}
+
+section.show-animate .animate {
+    filter: blur(0);
+}
+
+#about .animate {
+    transform: translateX(-100%)
+}
+
+#about.show-animate .animate {
+    transform: translateX(0);
+}
+
+#certifications .animate {
+    transform: translateY(100%)
+}
+
+#certifications.show-animate .animate {
+    transform: translateY(0);
+}
+
 h1 {
     font-size: 48px;
 }
@@ -126,6 +151,25 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     /* height: 400px; */
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container-home {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.container-home {
+    transform-origin: center;
 }
 
 .desc-home h1, h2, p {
