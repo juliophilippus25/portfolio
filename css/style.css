@@ -593,7 +593,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 414px) and (orientation: landscape){
     h1 {
         font-size: 22px;
     }
