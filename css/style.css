@@ -26,19 +26,14 @@ h2 {
 
 header{
     width: 100%;
-    /* position:fixed; */
-    /* left: 0;
-    top: 0;
-    right: 0; */
     padding: 20px 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     color: white;
     display: flex;
@@ -75,7 +70,7 @@ nav ul li a:hover {
 .menu-icon {
     display: none;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 32px;
     color: white;
     border-radius: 50%;
     background-color: #1A1D29;
@@ -127,7 +122,7 @@ nav ul li a:hover {
     color: white;
 }
 
-.container {
+.container-home {
     display: flex;
     justify-content: space-between;
     /* height: 400px; */
@@ -167,7 +162,7 @@ nav ul li a:hover {
 
 .img-home {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     width: 40%;
 }
@@ -182,6 +177,12 @@ nav ul li a:hover {
 #about p {
     font-weight: 400;
     line-height: 24px;
+}
+
+.container-about {
+    display: flex;
+    justify-content: space-between;
+    /* height: 400px; */
 }
 
 .job-exp {
@@ -341,6 +342,7 @@ nav ul li a:hover {
 
 .card-header h2 {
     font-size: 24px;
+    color: #3D3F4A;
     margin-bottom: 10px;
     padding: 0 10px;
 }
@@ -385,6 +387,39 @@ footer {
     color: gray; 
 }
 
+@media only screen and (max-width: 1200px) {
+    section {
+        padding: 40px 40px;
+    }
+
+    header {
+        padding: 20px 40px;
+    }
+}
+
+@media only screen and (max-width: 1028px) {
+    .job-exp, .project-exp {
+        width: 100%;
+        margin: 0;
+    }
+
+    .job-exp-item, .project-exp-item {
+        margin-top: 24px;
+    }
+
+    .container-about {
+        flex-direction: column;
+    }
+
+    .project-exp {
+        margin-top: 24px;
+    }
+
+    .tech-stack-item-detail {
+        margin-bottom: 10px;
+    }
+}
+
 @media only screen and (max-width:768px) {
     section {
         padding: 20px;
@@ -425,17 +460,132 @@ footer {
         display: none;
     }
 
-    .logo {
-        padding: 8px 0;
+    nav ul.hidden {
+        display: none;
     }
-    
+
     .menu-icon {
         display: flex;
         align-items: center;
         cursor: pointer;
     }
 
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .container-home {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .desc-home {
+        margin-top: 24px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .desc-home h1 {
+        /* width: 100%; */
+        text-align: center;
+    }
+
+    .img-home {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .tech-stack-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .tech-stack-item-detail {
+        margin-bottom: 10px;
+    }
+
+    .card-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: calc(100% - 20px);
+    }
+
     footer {
-        padding: 20px;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 24px;
+    }
+
+    .icon-footer {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 531px){
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    nav li {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .img-home img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .job-exp-item-detail li {
+        margin-left: 0;
+        line-height: 18px;
+        font-size: 14px;
+    }
+
+    .tech-stack-item-detail img {
+        width: 38px;
+        height: 38px;
+        filter: grayscale(1);
+        /* cursor: pointer; */
+    }
+
+    .card-header h2 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    footer {
+        margin-top: 24px;
     }
 }
