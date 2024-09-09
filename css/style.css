@@ -7,6 +7,8 @@
 html, body {
     padding: 0;
     margin: 0;
+    background-color: #1A1D29;
+    color: white;
 }
 
 section {
@@ -31,6 +33,7 @@ h2 {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
 .nav-links {
@@ -45,11 +48,14 @@ h2 {
 
 .nav-links a {
     text-decoration: none;
-    color: #272727;
+    color: white;
+    transition: .3s ease;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
 }
 
 .nav-links li > a:hover {
-    font-weight: bold;
+    border-bottom: 3px solid white;
 }
 
 .cta-buttons {
@@ -60,34 +66,43 @@ h2 {
 
 .btn {
     padding: 8px 16px;
-    background-color: #272727;
+    background-color: #3D3F4A;
     color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
+    transition: .3s ease;
 }
 
-.btn.contact {
-    background-color: #272727;
+.btn-contact {
+    background-color: #3D3F4A;
     color: white;
     border: none;
-    border-radius: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-credential {
+    background-color: #3D3F4A;
+    color: white;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: 500;
     text-decoration: none;
 }
 
 .btn:hover, .btn.active {
-    background-color: white;
-    color: #272727;
-    border: 1px solid #272727;
+    background-color: #7D8491;
+    color: white;
 }
 
 .btn.active:hover {
-    background-color: #272727;
+    background-color: #3D3F4A;
     color: white;
-    border: 1px solid #272727;
 }
 
 .container {
@@ -139,6 +154,7 @@ h2 {
     border-radius: 50%;
     width: 300px;
     height: 300px;
+    border: 3px solid white;
 }
 
 #about p {
@@ -324,7 +340,7 @@ h2 {
 }
 
 footer {
-    background-color: #272727;
+    background-color: #3D3F4A;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -344,5 +360,16 @@ footer {
 }
 
 .icon-footer a:hover {
-    color: gray; 
+    color: #1A1D29; 
 }
+
+/* @media (max-width:600px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+} */

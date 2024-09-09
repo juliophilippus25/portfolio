@@ -1,3 +1,4 @@
+// ToggleDetail
 function toggleDetail(e) {
   const target = $(e.target);
 
