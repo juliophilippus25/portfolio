@@ -632,7 +632,7 @@ footer {
         height: 200px;
     }
 
-    .job-exp-item-detail ul li {
+    .job-exp-item-detail, .project-exp-item-detail ul li {
         margin-left: 0;
         line-height: 18px;
         font-size: 14px;
